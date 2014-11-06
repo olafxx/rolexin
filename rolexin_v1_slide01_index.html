@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'> 
+	
+    <meta charset="utf-8" />
+	
+    <link rel="shortcut icon" href="favicon.ico" >
+	<link rel="icon" href="favicon.ico">
+	
+	
+	<link rel="stylesheet" href="files/css/style.css" />
+ 
+
+    <title>rolexin_1-13_Page 4.1</title>
+	
+	<script src ="script/cng-api.js"></script>
+
+ 	<script type="text/javascript" src="files/js/jquery-1.11.0.min.js"></script>	
+ 
+</head>
+
+<body>
+ 
+<div class="layout">
+	<div class="main bg-man">
+	 
+		<div class="logo logo-rolexin">Ролексин. Премиум результат в лечении стенокардии.</div>
+		
+		<div class="content">
+			
+			<h1>Пожалуйста, расставьте свои приоритеты<br>
+			при выборе лекарственного средства:</h1>
+			
+
+			<div class="grid" align="center">
+			
+				 <div class="grid__col-2">
+				 
+					<span class="btn">Эффективность</span>
+						
+				 </div>
+				 <div class="grid__col-2">
+				 
+						<span class="plate">1</span>
+						
+				 </div>
+				 <div class="clear"></div>
+				 
+				 
+				 <div class="grid__col-2">
+				 
+					<span class="btn">Безопасность</span>
+						
+				 </div>				 
+				 <div class="grid__col-2">
+				 
+						<span class="plate">2</span>
+						
+				 </div>
+				 <div class="clear"></div>
+
+				 
+				 <div class="grid__col-2">
+				 
+					<span class="btn pos3">Удобство применения</span>
+						
+				 </div>
+				 <div class="grid__col-2">
+				 
+						<span class="plate">3</span>
+						
+				 </div>
+				 <div class="clear"></div>
+
+				 
+				 <div class="grid__col-2">
+				 
+					<span class="btn pos4">Стоимость</span>
+						
+				 </div>
+				 <div class="grid__col-2">
+				 
+						<span class="plate">4</span>
+						
+				 </div>
+				 <div class="clear"></div>
+
+			</div>	
+						
+					
+ 
+			
+			
+		
+		</div>
+		
+		
+		<div class="row"></div>
+		<div class="logo logo-vivanti">Vivanti</div>
+	 
+	</div>
+</div>
+
+<script>
+$(function(){
+
+	var listPlate = $(".plate");
+	var cnt = 0;
+	
+	$(".btn").on("click",function(){
+		
+		if(cnt>=listPlate.length) return;
+		
+		var self = $(this);
+		self.addClass("desable");
+		
+		//animate from
+		self.css({
+			"position":"absolute",
+			"top":self[0].offsetTop,
+			"left":self[0].offsetLeft
+		});
+		 
+		//animate to 
+		self.css({
+ 			"top":listPlate[cnt].offsetTop,
+			"left":listPlate[cnt].offsetLeft
+		});
+		 
+		cnt++;
+		
+ 	})
+
+})
+</script>
+
+
+</body>
+</html>

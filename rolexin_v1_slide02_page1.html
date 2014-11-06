@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'> 
+	
+    <meta charset="utf-8" />
+	
+    <link rel="shortcut icon" href="favicon.ico" >
+	<link rel="icon" href="favicon.ico">
+	
+	
+	<link rel="stylesheet" href="files/css/style.css" />
+ 
+
+    <title>rolexin_1-13_Page 6.1</title>
+	
+	<script src ="script/cng-api.js"></script>
+
+ 	<script type="text/javascript" src="files/js/jquery-1.11.0.min.js"></script>	
+ 
+</head>
+
+<body>
+ 
+<div class="layout">
+	<div class="main bg-people">
+	 
+		<div class="logo logo-rolexin">Ролексин. Премиум результат в лечении стенокардии.</div>
+		
+		<div class="content">
+			
+			<h1>Количество пациентов, которым вы назначаете<br>
+			препараты из группы метаболиков в день?</h1>
+			
+		<div class="center_block">	
+		
+			<input type="text" value="" class="plate" id="sumHearts" disabled>
+			
+			<div class="list-hearts">
+				<ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart selected"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span><ul><li><span class="heart"></span></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul> 
+ 			
+			    		
+			</div>
+ 	
+		</div>
+ 
+			
+			
+		
+		</div>
+		
+		
+		<div class="row"></div>
+		<div class="logo logo-vivanti">Vivanti</div>
+	 
+	</div>
+</div>
+<script>
+$(function(){
+
+	var listHearts = $(".list-hearts  .heart");
+ 	
+	for(var i=0, length=listHearts.length; i<length; i++){
+ 		listHearts.eq(i).attr("data-num",i+1)
+	}	
+ 	 
+	 
+	listHearts.on("mouseenter",function(){
+	
+		var self = $(this);
+		
+		listHearts.closest("li").find("li").removeClass("selected");
+		self.parents("li").addClass("selected");
+		
+		$("#sumHearts").val(self.data("num"));
+		
+ 	})
+
+})
+</script>
+</body>
+</html>
